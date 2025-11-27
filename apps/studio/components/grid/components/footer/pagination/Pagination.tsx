@@ -130,6 +130,7 @@ export const Pagination = ({ enableForeignRowsQuery = true }: PaginationProps) =
 
   const onConfirmPreviousPage = () => {
     goToPreviousPage()
+    setIsConfirmPreviousModalOpen(false)
   }
 
   const onNextPage = () => {
@@ -144,6 +145,7 @@ export const Pagination = ({ enableForeignRowsQuery = true }: PaginationProps) =
 
   const onConfirmNextPage = () => {
     goToNextPage()
+    setIsConfirmNextModalOpen(false)
   }
 
   const goToPreviousPage = () => {

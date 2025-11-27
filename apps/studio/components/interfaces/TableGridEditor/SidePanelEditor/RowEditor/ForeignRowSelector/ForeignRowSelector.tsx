@@ -23,7 +23,7 @@ import {
 } from 'state/role-impersonation-state'
 import { TableEditorTableStateContextProvider } from 'state/table-editor-table'
 import { Button, SidePanel } from 'ui'
-import ActionBar from '../../ActionBar'
+import { ActionBar } from '../../ActionBar'
 import { ForeignKey } from '../../ForeignKeySelector/ForeignKeySelector.types'
 import { convertByteaToHex } from '../RowEditor.utils'
 import Pagination from './Pagination'
@@ -39,7 +39,7 @@ export interface ForeignRowSelectorProps {
   closePanel: () => void
 }
 
-const ForeignRowSelector = ({
+export const ForeignRowSelector = ({
   visible,
   foreignKey,
   onSelect,
@@ -270,5 +270,3 @@ const ForeignRowSelector = ({
     </SidePanel>
   )
 }
-
-export default ForeignRowSelector
