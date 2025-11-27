@@ -55,7 +55,14 @@ export const useUsersInfiniteQuery = <TData = UsersData>(
   const isActive = project?.status === PROJECT_STATUS.ACTIVE_HEALTHY
 
   return useInfiniteQuery({
-    queryKey: authKeys.usersInfinite(projectRef, { keywords, filter, providers, sort, order }),
+    queryKey: authKeys.usersInfinite(projectRef, {
+      keywords,
+      filter,
+      providers,
+      sort,
+      order,
+      column,
+    }),
     queryFn: ({ signal, pageParam }) => {
       return executeSql(
         {
@@ -72,7 +79,6 @@ export const useUsersInfiniteQuery = <TData = UsersData>(
             column,
             startAt: column ? (pageParam as string) : undefined,
           }),
-          queryKey: authKeys.usersInfinite(projectRef),
         },
         signal
       )
