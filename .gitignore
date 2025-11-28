@@ -63,6 +63,9 @@ typings/
 # TypeScript cache
 *.tsbuildinfo
 
+# Next.js declaration files (auto-generated)
+next-env.d.ts
+
 # Optional npm cache directory
 .npm
 
@@ -79,14 +82,9 @@ typings/
 .yarn-integrity
 
 # dotenv environment variables file
-.env
 # excempt the apps/www .env
 !apps/www/.env
 .env.tmp
-.env.test
-.env.local
-.env.staging
-.env.production
 
 # parcel-bundler cache (https://parceljs.org/)
 .cache
@@ -112,6 +110,10 @@ typings/
 .vscode
 .idea
 .vercel
+
+# AI assistant local files
+.claude/
+CLAUDE.md
 
 #include template .env file for docker-compose
 !docker/.env
@@ -143,3 +145,4 @@ gcloud.json
 **/.sentryclirc
 
 keys.json
+config.bat
